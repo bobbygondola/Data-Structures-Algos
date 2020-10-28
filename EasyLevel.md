@@ -1,4 +1,6 @@
-"EASY" LEVEL LEETCODE QUESTIONS... Which means not easy
+##"EASY" LEVEL LEETCODE QUESTIONS... Which means not easy
+</br>
+</br>
 ## 1480. Running Sum of 1d Array
 
 https://leetcode.com/problems/running-sum-of-1d-array/
@@ -230,18 +232,7 @@ class Solution:
         
         return (product - summ)
 ```
-[
-##
 
-url
-
->
->
-
-### Answer 
-```
-```
-]
 ## 1313. Decompress Run-Length Encoded List
 
 https://leetcode.com/problems/decompress-run-length-encoded-list/
@@ -328,4 +319,166 @@ class Solution:
         x = int(combined, 2)
         
         return x
+```
+
+## 191. Number of 1 Bits
+
+https://leetcode.com/problems/number-of-1-bits/
+
+> Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
+
+### Answer 
+```
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        return bin(n).count('1')
+``` 
+## 202. Happy Number
+
+https://leetcode.com/problems/happy-number/
+
+> Write an algorithm to determine if a number n is "happy".
+
+> A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the
+> process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1. Those numbers for which this process ends in 1 are happy
+> numbers.
+
+> Return True if n is a happy number, and False if not.
+
+### Answer 
+```
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        
+        seen = set()
+        while n not in seen:
+            seen.add(n)
+            n = sum([int(x) **2 for x in str(n)])
+        return n == 1
+```
+
+FORMAT
+[
+##
+
+url
+
+>
+>
+
+### Answer 
+```
+```
+]
+
+## 70. Climbing Stairs
+
+https://leetcode.com/problems/climbing-stairs/
+
+> You are climbing a stair case. It takes n steps to reach to the top.
+
+> Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+### Answer 
+```
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        """
+        Input: 2
+        Output: 2
+        
+        or
+        
+        Input: 10
+        Output: 89
+        """
+        
+        if n < 4:
+            return n
+        
+        x1 = 2
+        x2 = 3
+        
+        for i in range(n-3):
+            x3 = x1 + x2
+            x1 = x2
+            x2 = x3
+            
+        return x3
+```
+## 1. Two Sum
+
+https://leetcode.com/problems/two-sum/
+
+> Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+> You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+> You can return the answer in any order.
+
+### Answer 
+```
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        # eneumerate to grab indices
+        
+        dict = {}
+        
+        for index, value in enumerate(nums):
+            print(f"index = {index}, value = {value}")
+            
+            difference = target - value
+            
+            if difference in dict:              
+                return[dict[difference], index] 
+            
+            else:
+                dict[value] = index 
+```
+
+## 155. Min Stack
+
+https://leetcode.com/problems/min-stack/
+
+> Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+
+> push(x) -- Push element x onto stack.
+> pop() -- Removes the element on top of the stack.
+> top() -- Get the top element.
+> getMin() -- Retrieve the minimum element in the stack.
+
+### Answer 
+```
+class MinStack:
+    def __init__(self):
+        """
+        initialize your data structure here.
+        """
+        self.stack = []
+        
+
+    def push(self, x):
+        if not self.stack:self.stack.append((x,x)) 
+        else:
+            self.stack.append((x,min(x,self.stack[-1][1])))
+
+    def pop(self):
+        if self.stack: self.stack.pop()
+
+    def top(self):
+        if self.stack: return self.stack[-1][0]
+        else: return None
+
+    def getMin(self):
+        if self.stack: return self.stack[-1][1]
+        else: return None
+        
+
+
+# Your MinStack object will be instantiated and called as such:
+# obj = MinStack()
+# obj.push(x)
+# obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.getMin()
 ```
