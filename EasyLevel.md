@@ -1,8 +1,12 @@
 format
 ##
 
+url
+
 >
-### Answer
+>
+
+### Answer 
 ```
 ```
 
@@ -14,7 +18,7 @@ https://leetcode.com/problems/running-sum-of-1d-array/
 > Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
 > Return the running sum of nums.
 
-### Answer - 
+### Answer  
 
 ```
 class Solution(object):
@@ -35,10 +39,12 @@ class Solution(object):
 
 ## 1431. Kids With the Greatest Number of Candies
 
+https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
+
 > Given the array candies and the integer extraCandies, where candies[i] represents the number of candies that the ith kid has.
 > For each kid check if there is a way to distribute extraCandies among the kids such that he or she can have the greatest number of candies among them. Notice that multiple > > kids can have the greatest number of candies.
 
-### Answer -
+### Answer 
 
 ```
 class Solution:
@@ -48,3 +54,20 @@ class Solution:
         return [i >= high_enough for i in candies]
 	
 ```
+
+
+
+## Defanging an IP Address
+
+https://leetcode.com/problems/defanging-an-ip-address/
+
+> Given a valid (IPv4) IP address, return a defanged version of that IP address. A defanged IP address replaces every period "." with "[.]".
+
+### Answer
+
+```
+class Solution:
+    def defangIPaddr(self, address: str) -> str:
+        return address.replace(".", "[.]")
+```
+
