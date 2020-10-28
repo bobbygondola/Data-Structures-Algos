@@ -17,8 +17,6 @@ https://leetcode.com/problems/running-sum-of-1d-array/
 ```
 class Solution(object):
     def runningSum(self, nums):
-        
-    
 	    result = []
 	    result.append(nums[0])
 	    for i in range(1, len(nums)):
@@ -29,6 +27,42 @@ class Solution(object):
 </br>
 </br>
 </br>
+
+## 206. Reverse Linked List
+
+https://leetcode.com/problems/reverse-linked-list/
+
+> Reverse a singly linked list.
+
+### Answer 
+```
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def reverseList(self, head: ListNode) -> ListNode:
+        
+        # if not head:
+        #     return prev
+        # temp = head.next
+        # head.next = prev
+        # return self.reverseList(temp, head)
+        
+        prev=None
+        
+        while head:
+            temp = head
+            head = head.next
+            temp.next = prev
+            prev = temp
+        return prev
+```
+
+<br />
+<br />
+<br />
 
 ## 1431. Kids With the Greatest Number of Candies
 
@@ -555,38 +589,6 @@ class MinStack:
 </br>
 </br>
 </br>
-
-## 206. Reverse Linked List
-
-https://leetcode.com/problems/reverse-linked-list/
-
-> Reverse a singly linked list.
-
-### Answer 
-```
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-class Solution:
-    def reverseList(self, head: ListNode) -> ListNode:
-        
-        # if not head:
-        #     return prev
-        # temp = head.next
-        # head.next = prev
-        # return self.reverseList(temp, head)
-        
-        prev=None
-        
-        while head:
-            temp = head
-            head = head.next
-            temp.next = prev
-            prev = temp
-        return prev
-```
 
 FORMATING
 [
