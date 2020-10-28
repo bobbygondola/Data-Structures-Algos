@@ -2,7 +2,7 @@ format
 ##
 
 >
-
+### Answer
 ```
 ```
 
@@ -27,6 +27,10 @@ class Solution(object):
 		    result.append(result[-1]+nums[i])
 	    return result
 ```
+
+
+
+
 
 
 ## 1431. Kids With the Greatest Number of Candies
