@@ -71,3 +71,34 @@ class Solution:
         return address.replace(".", "[.]")
 ```
 
+## 1512. Number of Good Pairs
+
+https://leetcode.com/problems/number-of-good-pairs/
+
+> Given an array of integers nums.
+
+> A pair (i,j) is called good if nums[i] == nums[j] and i < j.
+
+> Return the number of good pairs.
+
+
+### Answer 
+```
+class Solution(object):
+    def numIdenticalPairs(self, nums):
+    
+        repeating = {}
+        count = 0
+        
+        for i in nums:
+            if i in repeating:
+                
+                if repeating[i] == 1:
+                    count += 1
+                else:
+                    count += repeating[i]
+                repeating[i] += 1
+            else:
+                repeating[i] = 1  
+        return count
+```
