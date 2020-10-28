@@ -43,15 +43,8 @@ https://leetcode.com/problems/reverse-linked-list/
 #         self.next = next
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
-        
-        # if not head:
-        #     return prev
-        # temp = head.next
-        # head.next = prev
-        # return self.reverseList(temp, head)
-        
+    
         prev=None
-        
         while head:
             temp = head
             head = head.next
