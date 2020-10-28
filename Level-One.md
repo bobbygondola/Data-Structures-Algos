@@ -1,6 +1,5 @@
 ## LVL 1 LEETCODE
-# Finished as of 10/28/2020 - 20
-
+## `Finished - 20`
 </br>
 </br>
 </br>
