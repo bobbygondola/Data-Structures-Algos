@@ -1,5 +1,5 @@
 ## "EASY" LEVEL LEETCODE QUESTIONS... Which means not easy
-# Finished as of 10/28/2020 - 18
+# Finished as of 10/28/2020 - 19
 
 </br>
 </br>
