@@ -57,7 +57,7 @@ class Solution:
 
 
 
-## Defanging an IP Address
+## 1108. Defanging an IP Address
 
 https://leetcode.com/problems/defanging-an-ip-address/
 
@@ -102,3 +102,45 @@ class Solution(object):
                 repeating[i] = 1  
         return count
 ```
+
+## 771. Jewels and Stones
+
+https://leetcode.com/problems/jewels-and-stones/
+
+> You're given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each character in S is a type of stone you have.  You want 
+> to know how many of the stones you have are also jewels.
+
+> The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so "a" is considered a different type of stone from "A".
+
+### Answer 
+```
+class Solution:
+    def numJewelsInStones(self, J: str, S: str) -> int:
+        return sum(map(J.count, S))
+```
+
+## 1342. Number of Steps to Reduce a Number to Zero
+
+https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/
+
+> Given a non-negative integer num, return the number of steps to reduce it to zero. If the current number is even, you have to divide it by 2, otherwise, you have to subtract > 1 from it.
+
+
+### Answer 
+#### JavaScript
+```
+const numberOfSteps = (num) => {
+    let count = 0;
+    while(num){
+        if (num % 2) {
+            count++;
+            num--;
+        } else {
+            count++;
+            num = num / 2;
+        }
+    }
+    return count;
+};
+```
+
