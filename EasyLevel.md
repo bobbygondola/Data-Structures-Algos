@@ -1,6 +1,8 @@
 ##"EASY" LEVEL LEETCODE QUESTIONS... Which means not easy
 </br>
 </br>
+</br>
+</br>
 ## 1480. Running Sum of 1d Array
 
 https://leetcode.com/problems/running-sum-of-1d-array/
@@ -21,11 +23,10 @@ class Solution(object):
 		    result.append(result[-1]+nums[i])
 	    return result
 ```
-
-
-
-
-
+</br>
+</br>
+</br>
+</br>
 
 ## 1431. Kids With the Greatest Number of Candies
 
@@ -44,7 +45,10 @@ class Solution:
         return [i >= high_enough for i in candies]
 	
 ```
-
+</br>
+</br>
+</br>
+</br>
 
 
 ## 1108. Defanging an IP Address
