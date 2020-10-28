@@ -87,6 +87,29 @@ class Solution:
 <br />
 <br />
 
+## 119. Pascal's Triangle II
+
+https://leetcode.com/problems/pascals-triangle-ii/
+
+> Given an integer rowIndex, return the rowIndexth row of the Pascal's triangle.
+
+> Notice that the row index starts from 0.
+
+### Answer 
+```
+class Solution:
+    def getRow(self, rowIndex: int) -> List[int]:
+        result = [1]*(rowIndex + 1)
+        for i in range(1, rowIndex):
+            for j in range(i, 0, -1):
+                result[j] += result[j-1]
+        return result
+```
+
+<br />
+<br />
+<br />
+
 ## 1431. Kids With the Greatest Number of Candies
 
 https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
