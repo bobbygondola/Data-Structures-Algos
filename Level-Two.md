@@ -1,5 +1,5 @@
 ## LEVEL TWO LEETCODE
-# Finished as of 10/28/2020 1
+## `Finished - 1`
 
 <br />
 <br />
