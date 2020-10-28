@@ -64,6 +64,10 @@ class Solution:
     def defangIPaddr(self, address: str) -> str:
         return address.replace(".", "[.]")
 ```
+</br>
+</br>
+</br>
+</br>
 
 ## 1512. Number of Good Pairs
 
@@ -96,6 +100,10 @@ class Solution(object):
                 repeating[i] = 1  
         return count
 ```
+</br>
+</br>
+</br>
+</br>
 
 ## 771. Jewels and Stones
 
@@ -112,6 +120,10 @@ class Solution:
     def numJewelsInStones(self, J: str, S: str) -> int:
         return sum(map(J.count, S))
 ```
+</br>
+</br>
+</br>
+</br>
 
 ## 1342. Number of Steps to Reduce a Number to Zero
 
@@ -138,34 +150,10 @@ const numberOfSteps = (num) => {
 };
 ```
 
-## 1528. Shuffle String
-
-https://leetcode.com/problems/shuffle-string/
-
-> Given a string s and an integer array indices of the same length.
-
-> The string s will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string.
-
-> Return the shuffled string.
-
-### Answer 
-```
-class Solution:
-    def restoreString(self, s: str, indices: List[int]) -> str:
-        
-        result = []
-        s_list = list(s)
-        
-        combined = zip(indices, s_list)
-        x = list(combined)
-        
-        sorted_combined = sorted(x)
-        
-        for key, value in sorted_combined:
-            result.append(value)
-        winner = "".join(result)
-        return winner
-```
+</br>
+</br>
+</br>
+</br>
 
 ## 1528. Shuffle String
 
@@ -195,6 +183,45 @@ class Solution:
         winner = "".join(result)
         return winner
 ```
+
+</br>
+</br>
+</br>
+</br>
+
+## 1528. Shuffle String
+
+https://leetcode.com/problems/shuffle-string/
+
+> Given a string s and an integer array indices of the same length.
+
+> The string s will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string.
+
+> Return the shuffled string.
+
+### Answer 
+```
+class Solution:
+    def restoreString(self, s: str, indices: List[int]) -> str:
+        
+        result = []
+        s_list = list(s)
+        
+        combined = zip(indices, s_list)
+        x = list(combined)
+        
+        sorted_combined = sorted(x)
+        
+        for key, value in sorted_combined:
+            result.append(value)
+        winner = "".join(result)
+        return winner
+```
+
+</br>
+</br>
+</br>
+</br>
 
 ## 1365. How Many Numbers Are Smaller Than the Current Number
 
@@ -212,6 +239,11 @@ class Solution:
         
         return([sorted(nums).index(i) for i in nums])
 ```
+
+</br>
+</br>
+</br>
+</br>
 
 ## 1281. Subtract the Product and Sum of Digits of an Integer
 
@@ -236,6 +268,11 @@ class Solution:
         
         return (product - summ)
 ```
+
+</br>
+</br>
+</br>
+</br>
 
 ## 1313. Decompress Run-Length Encoded List
 
@@ -263,6 +300,10 @@ class Solution:
             
         return decoded
 ```
+</br>
+</br>
+</br>
+</br>
 
 ## 1389. Create Target Array in the Given Order
 
@@ -287,6 +328,10 @@ class Solution:
             result.insert(idx,num)
         return result
 ```
+</br>
+</br>
+</br>
+</br>
 
 ## 1290. Convert Binary Number in a Linked List to Integer
 
@@ -325,6 +370,11 @@ class Solution:
         return x
 ```
 
+</br>
+</br>
+</br>
+</br>
+
 ## 191. Number of 1 Bits
 
 https://leetcode.com/problems/number-of-1-bits/
@@ -337,6 +387,13 @@ class Solution:
     def hammingWeight(self, n: int) -> int:
         return bin(n).count('1')
 ``` 
+
+</br>
+</br>
+</br>
+</br>
+
+
 ## 202. Happy Number
 
 https://leetcode.com/problems/happy-number/
@@ -361,19 +418,11 @@ class Solution:
         return n == 1
 ```
 
-FORMAT
-[
-##
+</br>
+</br>
+</br>
+</br>
 
-url
-
->
->
-
-### Answer 
-```
-```
-]
 
 ## 70. Climbing Stairs
 
@@ -410,6 +459,13 @@ class Solution:
             
         return x3
 ```
+
+</br>
+</br>
+</br>
+</br>
+
+
 ## 1. Two Sum
 
 https://leetcode.com/problems/two-sum/
@@ -439,6 +495,12 @@ class Solution:
             else:
                 dict[value] = index 
 ```
+
+</br>
+</br>
+</br>
+</br>
+
 
 ## 155. Min Stack
 
@@ -486,3 +548,23 @@ class MinStack:
 # param_3 = obj.top()
 # param_4 = obj.getMin()
 ```
+
+</br>
+</br>
+</br>
+</br>
+
+FORMATING
+[
+##
+
+url
+
+>
+>
+
+### Answer 
+```
+```
+]
+
