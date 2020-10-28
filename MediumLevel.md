@@ -19,7 +19,8 @@ https://leetcode.com/problems/swap-nodes-in-pairs/
 #         self.next = next
 class Solution:
     def swapPairs(self, head: ListNode) -> ListNode:
-        
+        if not head or not head.next:
+            return head
         second = head.next
         head.next = self.swapPairs(second.next)
         second.next = head
