@@ -1,5 +1,5 @@
 ## LVL 1 LEETCODE
-## <p style={{align: center}}>`Finished - 23`</p>
+## <p style={{align: "center"}}>`Finished - 23`</p>
 </br>
 </br>
 </br>
