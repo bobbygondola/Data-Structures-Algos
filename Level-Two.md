@@ -1,5 +1,5 @@
-## LEVEL TWO LEETCODE
-## `Finished - 1`
+## <div style="center" > **LEVEL TWO LEETCODE **</div>
+## <div style="center" >*`Finished - 1`* </div>
 
 <br />
 <br />
