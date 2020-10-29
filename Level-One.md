@@ -1,5 +1,5 @@
 ## LVL 1 LEETCODE
-## `Finished - 22`
+## `Finished - 23`
 </br>
 </br>
 </br>
@@ -657,6 +657,25 @@ class Solution:
         complete = map(int, str(x))
         
         return(complete)
+```
+
+<br/ >
+<br />
+<br />
+
+## 326. Power of Three
+
+https://leetcode.com/problems/power-of-three/
+
+> Given an integer, write a function to determine if it is a power of three.
+
+### Answer 
+```
+import math
+class Solution:
+    def isPowerOfThree(self, n: int) -> bool:
+        return n > 0 and 3 ** round(math.log(n, 3)) == n
+    '''if log(n, 3) == n**3 we have the right answer'''
 ```
 
 FORMATING
