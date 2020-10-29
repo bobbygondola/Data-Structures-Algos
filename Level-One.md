@@ -1,5 +1,5 @@
 ## LVL 1 LEETCODE
-## `Finished - 21`
+## `Finished - 22`
 </br>
 </br>
 </br>
@@ -635,6 +635,29 @@ class MinStack:
 </br>
 </br>
 </br>
+
+## 66. Plus One
+
+https://leetcode.com/problems/plus-one/
+
+> Given a non-empty array of digits representing a non-negative integer, increment one to the integer.
+
+> The digits are stored such that the most significant digit is at the head of the list, and each element in the array contains a single digit.
+
+### Answer 
+```
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        
+        strings = [str(digits) for digits in digits]
+        a_string = "".join(strings)
+        one_integer = int(a_string)
+
+        x = one_integer + 1
+        complete = map(int, str(x))
+        
+        return(complete)
+```
 
 FORMATING
 [
