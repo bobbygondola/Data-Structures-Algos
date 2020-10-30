@@ -1,8 +1,6 @@
 ## <div align="center">**LVL 1 LEETCODE**</div>
 ## <div align="center"><p>*`Finished - 23`*</p><div>
 </br>
-</br>
-</br>
 
 ## 700. Search in a Binary Search Tree
 
