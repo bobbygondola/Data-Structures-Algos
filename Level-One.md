@@ -1,5 +1,5 @@
 ## <div align="center">**LVL 1 LEETCODE**</div>
-## <div align="center"><p>*`Finished - 24`*</p><div>
+## <div align="center"><p>*`Finished - 25`*</p><div>
 </br>
 
 ## 700. Search in a Binary Search Tree
@@ -703,6 +703,36 @@ class Solution:
             return head.next
         return head
 ```
+<br />
+<br />
+<br />
+
+## 237. Delete Node in a Linked List
+
+https://leetcode.com/problems/delete-node-in-a-linked-list/
+
+> Write a function to delete a node in a singly-linked list. You will not be given access to the head of the list,
+> instead you will be given access to the node to be deleted directly.
+
+
+### Answer 
+```
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def deleteNode(self, node):
+        
+        node.val = node.next.val
+        node.next = node.next.next
+```
+<br />
+<br />
+<br />
+
 FORMATING
 [
 ##
