@@ -69,4 +69,46 @@ class Solution:
 <br />
 <br />
 
+## 445. Add Two Numbers II
+
+https://leetcode.com/problems/add-two-numbers-ii/
+
+> You are given two non-empty linked lists representing two non-negative integers. 
+> The most significant digit comes first and each of their nodes contain a single digit. 
+> Add the two numbers and return it as a linked list.
+
+### Answer 
+```
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        
+        ans = []
+        
+        num_one = ""
+        node = l1
+        while node:
+            num_one += str(node.val)
+            node = node.next
+        
+        num_two = ""
+        snode = l2
+        while snode:
+            num_two += str(snode.val)
+            snode = snode.next
+        
+        x = int(num_one)
+        y = int(num_two)
+        
+        
+        res = (x+y)
+        for i in str(res):
+            ans.append(i)
+        x = ",".join(ans)
+        return(ListNode(x))
+```
 
