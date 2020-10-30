@@ -69,6 +69,59 @@ class Solution:
 <br />
 <br />
 
+## 2. Add Two Numbers
+
+https://leetcode.com/problems/add-two-numbers/
+
+> You are given two non-empty linked lists representing two non-negative integers.
+> The digits are stored in reverse order, and each of their nodes contains a single digit. 
+> Add the two numbers and return the sum as a linked list.
+
+### Answer 
+```
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution(object):
+    def addTwoNumbers(self, l1, l2):
+        """
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        """
+        ans = []
+        
+        lldigits = []
+        
+        node1 = l1
+        while node1:
+            lldigits.insert(0,str(node1.val))
+            node1 = node1.next
+        
+        ll2digits = []
+        
+        node2 = l2
+        while node2:
+            ll2digits.insert(0,str(node2.val))
+            node2 = node2.next
+            
+        x = "".join(lldigits)
+        y = "".join(ll2digits)
+        
+        z = (int(x)+int(y))
+        
+        for i in str(z):
+            ans.append(i)
+        e = ",".join(ans)[::-1]
+        return ListNode(e)
+```
+
+<br />
+<br />
+<br />
+
 ## 445. Add Two Numbers II
 
 https://leetcode.com/problems/add-two-numbers-ii/
