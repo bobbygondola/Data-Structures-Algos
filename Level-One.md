@@ -677,7 +677,34 @@ class Solution:
         return n > 0 and 3 ** round(math.log(n, 3)) == n
     '''if log(n, 3) == n**3 we have the right answer'''
 ```
+<br />
+<br />
+<br />
 
+## 203. Remove Linked List Elements
+
+https://leetcode.com/problems/remove-linked-list-elements/
+
+> Remove all elements from a linked list of integers that have value val.
+
+### Answer 
+```
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def removeElements(self, head: ListNode, val: int) -> ListNode:
+        
+        if head == None:
+            return None
+        
+        head.next = self.removeElements(head.next, val);
+        if head.val == val:
+            return head.next
+        return head
+```
 FORMATING
 [
 ##
