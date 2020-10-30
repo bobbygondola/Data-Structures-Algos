@@ -121,8 +121,8 @@ https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
         
-        high_enough = max(candies) - extraCandies
-        return [i >= high_enough for i in candies]
+        above_min = max(candies) - extraCandies
+        return [i >= above_min for i in candies]
 	
 ```
 </br>
