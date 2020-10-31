@@ -767,6 +767,39 @@ class Solution:
 <br />
 <br />
 
+## 21. Merge Two Sorted Lists
+
+https://leetcode.com/problems/merge-two-sorted-lists/
+
+> Merge two sorted linked lists and return it as a new sorted list. 
+> The new list should be made by splicing together the nodes of the first two lists.
+
+### Answer 
+```
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
+        def helper(l1, l2):
+            if not l1: return l2
+            if not l2: return l1
+            if l1.val <= l2.val:
+                l1.next = helper(l1.next, l2)
+                return l1
+            else:
+                l2.next = helper(l1, l2.next)
+                return l2
+        
+        return helper(l1, l2)
+```
+
+<br />
+<br />
+<br />
+
 
 FORMATING
 [
