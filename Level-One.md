@@ -1,5 +1,5 @@
 ## <div align="center">**LVL 1 LEETCODE**</div>
-## <div align="center"><p>*`Finished - 24`*</p><div>
+## <div align="center"><p>*`Finished - 25`*</p><div>
 </br>
 
 ## 700. Search in a Binary Search Tree
@@ -732,6 +732,41 @@ class Solution:
 <br />
 <br />
 <br />
+
+## 876. Middle of the Linked List
+
+https://leetcode.com/problems/middle-of-the-linked-list/
+
+> Given a non-empty, singly linked list with head node head, return a middle node of linked list.
+
+> If there are two middle nodes, return the second middle node.
+
+### Answer 
+```
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def middleNode(self, head: ListNode) -> ListNode:
+        """
+        Make 2 pointers slow and fast, fast goes twice as fast as slow.
+        By the time the fast pointer reaches the end.. the slow pointer is on the middle
+        """
+        slow = head
+        fast = head
+        
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+        return slow
+```
+
+<br />
+<br />
+<br />
+
 
 FORMATING
 [
