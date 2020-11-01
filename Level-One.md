@@ -1,4 +1,4 @@
-## <div align="center">**LVL 1 LEETCODE**</div>
+## <div align="center">**LVL 1 LEETCODE - EZ**</div>
 ## <div align="center"><p>*`Finished - 26`*</p><div>
 </br>
 
