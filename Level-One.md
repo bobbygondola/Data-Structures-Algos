@@ -820,6 +820,38 @@ class Solution:
         return len(res)
 ```
 
+<br />
+<br />
+<br />
+
+## 1450. Number of Students Doing Homework at a Given Time
+
+https://leetcode.com/problems/number-of-students-doing-homework-at-a-given-time/
+
+> Given two integer arrays startTime and endTime and given an integer queryTime.
+
+> The ith student started doing their homework at the time startTime[i] and finished it at time endTime[i].
+
+> Return the number of students doing their homework at time queryTime. 
+> More formally, return the number of students where queryTime lays in the interval [startTime[i], endTime[i]] inclusive.
+
+### Answer 
+```
+class Solution:
+    def busyStudent(self, startTime: List[int], endTime: List[int], queryTime: int) -> int:
+        '''
+        [1,3], [4,5], 5 -> 1 one student was working while the query time passed or ended
+        '''
+        count = 0
+        
+        x = list(zip(startTime, endTime))
+        
+        for j,k in x:
+            if j <= queryTime <= k:
+                count += 1
+        return count
+```
+
 
 FORMATING
 [
