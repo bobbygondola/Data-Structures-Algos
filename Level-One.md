@@ -1,5 +1,5 @@
 ## <div align="center">**LVL 1 LEETCODE**</div>
-## <div align="center"><p>*`Finished - 26`*</p><div>
+## <div align="center"><p>*`Finished - 29`*</p><div>
 </br>
 
 ## 700. Search in a Binary Search Tree
@@ -850,6 +850,27 @@ class Solution:
             if j <= queryTime <= k:
                 count += 1
         return count
+```
+<br />
+<br />
+<br />
+
+## 283. Move Zeroes
+
+https://leetcode.com/problems/move-zeroes/
+
+> Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+
+### Answer 
+```
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        for i in nums:
+            if i == 0:
+                nums.append(nums.pop(nums.index(0)))
 ```
 
 
