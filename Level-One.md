@@ -873,6 +873,36 @@ class Solution:
                 nums.append(nums.pop(nums.index(0)))
 ```
 
+<br />
+<br />
+<br />
+
+## 27. Remove Element
+
+https://leetcode.com/problems/remove-element/
+
+> Given an array nums and a value val, remove all instances of that value in-place and return the new length.
+
+> Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+
+### Answer 
+```
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        
+        """
+        remove all instances of Val in Nums, return new length
+        """
+        
+        while(val in nums):
+            del nums[nums.index(val)]
+        return len(nums)
+```
+
+<br />
+<br />
+<br />
+
 
 FORMATING
 [
