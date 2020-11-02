@@ -29,3 +29,42 @@ class Solution:
                 return True
         return False
 ```
+<br />
+<br />
+<br />
+
+## Majority Element
+
+https://leetcode.com/interview/2/submissions/
+
+> Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.
+
+> Follow-up: Could you solve the problem in linear time and in O(1) space?
+
+```
+from collections import Counter
+
+class Solution:
+    def majorityElement(self, nums: List[int]) -> List[int]:
+        '''
+        return all i's if they appear more than n/3 times
+        
+        make a list
+        
+        add nums to counter
+        
+        check if the value of the key is greater than len(nums)/3
+        
+        add that key to the list
+        '''
+        
+        res = []
+        
+        my_dict = Counter(nums)
+        
+        for key, val in my_dict.items():
+            if val > int(len(nums)/3):
+                res.append(key)
+            
+        return res
+```
