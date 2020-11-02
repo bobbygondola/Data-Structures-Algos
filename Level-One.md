@@ -1,5 +1,5 @@
 ## <div align="center">**LVL 1 LEETCODE**</div>
-## <div align="center"><p>*`Finished - 31`*</p><div>
+## <div align="center"><p>*`Finished - 32`*</p><div>
 </br>
 
 ## 700. Search in a Binary Search Tree
@@ -903,6 +903,28 @@ class Solution:
 <br />
 <br />
 
+## 26. Remove Duplicates from Sorted Array
+
+https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+
+> Given a sorted array nums, remove the duplicates in-place such that each element appears only once and returns the new length.
+
+> Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+
+### Answer 
+```
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        
+        last = 0
+        
+        for first in range(len(nums)):
+            if nums[first] != nums[last]:
+                last += 1
+                nums[last] = nums[first]
+                
+        return last + 1
+```
 
 FORMATING
 [
