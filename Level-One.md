@@ -801,6 +801,25 @@ class Solution:
 <br />
 <br />
 
+## 1295. Find Numbers with Even Number of Digits
+
+https://leetcode.com/problems/find-numbers-with-even-number-of-digits/
+
+> Given an array nums of integers, return how many of them contain an even number of digits.
+
+### Answer 
+```
+class Solution:
+    def findNumbers(self, nums: List[int]) -> int:
+        
+        res = []
+        
+        for i in nums:
+            if len(str(i)) % 2 == 0:
+                res.append(i)
+        return len(res)
+```
+
 
 FORMATING
 [
